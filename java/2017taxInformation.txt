@@ -1,0 +1,66 @@
+Tax Bracket Information
+
+Single
+
+Tax rate	Taxable income bracket	Tax owed
+10%			$0 to $9,325			10% of taxable income
+15%			$9,326 to $37,950		$932.50 plus 15% of the amount over $9,325
+25%			$37,951 to $91,900		$5,226.25 plus 25% of the amount over $37,950
+28%			$91,901 to $191,650		$18,713.75 plus 28% of the amount over $91,900
+33%			$191,651 to $416,700	$46,643.75 plus 33% of the amount over $191,650
+35%			$416,701 to $418,400	$120,910.25 plus 35% of the amount over $416,700
+39.6%		$418,401 or more		$121,505.25 plus 39.6% of the amount over $418,400
+
+Married filing jointly
+
+Tax rate	Taxable income bracket	Tax owed
+10%			$0 to $18,650			10% of taxable income
+15%			$18,651 to $75,900		$1,865.00 plus 15% of the amount over $18,650
+25%			$75,901 to $153,100		$10,452.50 plus 25% of the amount over $75,900
+28%			$153,101 to $233,350	$29,752.50 plus 28% of the amount over $153,100
+33%			$233,351 to $416,700	$52,222.50 plus 33% of the amount over $233,350
+35%			$416,701 to $470,700	$112,728.00 plus 35% of the amount over $416,700
+39.6%		$470,701 or more		$131,628.00 plus 39.6% of the amount over $470,700
+
+Your standard deduction lowers your taxable income.  It is not a refund 
+
+2017 Standard Deductions
+
+Single   					$6350  (65 or older + $1550)
+
+Married Filing Separately   $6350  (65 or older +  $1250)
+
+Married Filing Jointly      $12,700  (65 or older + $1250@)
+
+Head of Household 			$9350  (65 or older + $1550)
+
+Income below $66,000: Free File Software
+File your taxes with free, easy to use software
+Free state return options are available
+Use the Free File Software Lookup Tool to find free federal and
+free state return options
+
+Income above $66,000: Free File Fillable Forms
+Must know how to do your taxes yourself
+Does math; offers only basic guidance
+You must have your 2016 Tax Return
+State tax prep is not available
+
+
+The government decides how much tax you owe by dividing your taxable income into chunks 
+— also known as tax brackets — and each chunk gets taxed at the corresponding rate. 
+The beauty of this is that no matter which bracket you’re in, you won’t pay that rate on your entire income.
+
+Being in the 25% tax bracket doesn’t mean you pay 25% on everything you make.
+
+For example, let’s say you’re a single filer with $32,000 in taxable income. 
+That puts you in the 15% tax bracket in 2017. But do you pay 15% on all $32,000? 
+No. Actually, you pay only 10% on the first $9,325; you pay 15% on the rest. 
+(Look at the tax brackets above to see the breakout.)
+
+If you had $50,000 of taxable income, 
+you’d pay 10% on that first $9,325 and 15% on the chunk of income between $9,326 and $37,950. 
+And then you’d pay 25% on the rest, because some of your $50,000 of taxable income falls into the 25% tax bracket. 
+The total bill would be about $8,200
+ — about 16% of your taxable income, even though you’re in the 25% bracket.
+
