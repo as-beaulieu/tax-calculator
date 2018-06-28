@@ -3,9 +3,17 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"goprograms/taxcalculator/src/income"
 	"os"
 	"strings"
 )
+
+//As long as files are on the same level as Main, can build without importing as package
+//just use 'go build .' and .exe will be named (foldername).exe
+
+//For local packages, reference the function by its package, and reference it from the gopath in import
+//Example for function a inside package b
+//referece b.a, VSC will also try to automatically insert the import
 
 //Also considering
 //https://www.thebalancesmb.com/how-to-calculate-deductions-from-employee-paychecks-398721
@@ -27,80 +35,16 @@ func main() {
 	sLower := strings.ToLower(s)
 	var output float64
 	if strings.Compare(sLower, "s") == 1 {
-		income := ReceiveIncomeAndDeductible()
+		income := income.ReceiveIncomeAndDeductible()
 		deductible := 6350.00
 		output = DetermineSingleTaxBill(income, deductible)
 	} else if strings.Compare(sLower, "m") == 1 {
-		income := ReceiveIncomeAndDeductible()
+		income := income.ReceiveIncomeAndDeductible()
 		deductible := 12700.00
 		output = DetermineMarriedJointlyTaxBill(income, deductible)
 	}
 
 	fmt.Println("Your tax requirement for the year is: ", output)
-}
-
-func DetermineMarriedJointlyTaxBill(income, deductible float64) float64 {
-	var firstBracket, secondBracket, thirdBracket, fourthBracket, fifthBracket, sixthBracket, seventhBracket, taxBill float64
-	firstBracket = 18650
-	taxableIncome := income - deductible
-	if taxableIncome <= 18650 {
-		taxBill += taxableIncome * 0.10
-	} else if taxableIncome > 18650 && taxableIncome < 75900 {
-		taxBill += firstBracket * 0.10
-		secondBracket = taxableIncome - firstBracket
-		taxBill += secondBracket * 0.15
-	} else if taxableIncome > 75900 && taxableIncome < 153100 {
-		taxBill += firstBracket * 0.10
-		secondBracket = 18650 - firstBracket
-		taxBill += secondBracket * 0.15
-		thirdBracket = taxableIncome - 75900
-		taxBill += thirdBracket * 0.25
-	} else if taxableIncome > 153100 && taxableIncome < 233350 {
-		taxBill += firstBracket * 0.10
-		secondBracket = 18650 - firstBracket
-		taxBill += secondBracket * 0.15
-		thirdBracket = 153100 - 75900
-		taxBill += thirdBracket * 0.25
-		fourthBracket = taxableIncome - 153100
-		taxBill += fourthBracket * 0.28
-	} else if taxableIncome > 233350 && taxableIncome < 416700 {
-		taxBill += firstBracket * 0.10
-		secondBracket = 18650 - firstBracket
-		taxBill += secondBracket * 0.15
-		thirdBracket = 153100 - 75900
-		taxBill += thirdBracket * 0.25
-		fourthBracket = 233350 - 153100
-		taxBill += fourthBracket * 0.28
-		fifthBracket = taxableIncome - 233350
-		taxBill += fifthBracket * 0.33
-	} else if taxableIncome > 416700 && taxableIncome < 470700 {
-		taxBill += firstBracket * 0.10
-		secondBracket = 18650 - firstBracket
-		taxBill += secondBracket * 0.15
-		thirdBracket = 153100 - 75900
-		taxBill += thirdBracket * 0.25
-		fourthBracket = 233350 - 153100
-		taxBill += fourthBracket * 0.28
-		fifthBracket = 416700 - 233350
-		taxBill += fifthBracket * 0.33
-		sixthBracket = taxableIncome - 416700
-		taxBill += sixthBracket * 0.35
-	} else if taxableIncome > 418400 {
-		taxBill += firstBracket * 0.10
-		secondBracket = 18650 - firstBracket
-		taxBill += secondBracket * 0.15
-		thirdBracket = 153100 - 75900
-		taxBill += thirdBracket * 0.25
-		fourthBracket = 233350 - 153100
-		taxBill += fourthBracket * 0.28
-		fifthBracket = 416700 - 233350
-		taxBill += fifthBracket * 0.33
-		sixthBracket = 470700 - 416700
-		taxBill += sixthBracket * 0.35
-		seventhBracket = taxableIncome - 470700
-		taxBill += seventhBracket * 0.396
-	}
-	return taxBill
 }
 
 func DetermineSingleTaxBill(income, deductible float64) float64 {
@@ -173,13 +117,13 @@ func DetermineSingleTaxBill(income, deductible float64) float64 {
 	return taxBill
 }
 
-func ReceiveIncomeAndDeductible() float64 {
+// func ReceiveIncomeAndDeductible() float64 {
 
-	var i float64
-	fmt.Println("Input Gross Annual Income:")
-	_, err := fmt.Scan(&i)
-	if err != nil {
-		fmt.Println(err)
-	}
-	return i
-}
+// 	var i float64
+// 	fmt.Println("Input Gross Annual Income:")
+// 	_, err := fmt.Scan(&i)
+// 	if err != nil {
+// 		fmt.Println(err)
+// 	}
+// 	return i
+// }
